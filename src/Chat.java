@@ -4,7 +4,7 @@
 
 public abstract class Chat {
 
-    public Chat(IClient client, ICompany company){
+    public Chat(IUser client, ICompany company){
 
     }
 

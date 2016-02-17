@@ -11,36 +11,36 @@ enum ClientType{
     ANONYMOUS_USER
 }
 
-interface IClient {
+interface IUser {
     String getName();
-    IClient setName(String name);
+    IUser setName(String name);
 
     String getSurname();
-    IClient setSurname(String surname);
+    IUser setSurname(String surname);
 
     String getMail();
-    IClient setMail(String mail);
+    IUser setMail(String mail);
 
     List<String> getMessagesLogsForCompany(ICompany company);
 
-    IClient joinCompany(ICompany company);
+    IUser joinCompany(ICompany company);
 
     ClientType getType();
 }
 
-interface IAnonymousClient extends IClient {
+interface IAnonymousUser extends IUser {
 
 }
 
-interface IOrdinaryClient extends IClient {
+interface IOrdinaryUser extends IUser {
     void setRating(int rating, ICompany company);
 }
 
-interface IManager extends IClient {
+interface IManager extends IUser {
     boolean isActive();
 }
 
-interface IAdmin extends IClient {
+interface IAdmin extends IUser {
 
 }
 

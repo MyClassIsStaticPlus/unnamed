@@ -3,7 +3,7 @@
  */
 
 interface IDataBase {
-    boolean createClient(IClient client, ClientType type, String login, String password);
+    boolean createClient(IUser client, ClientType type, String login, String password);
     boolean createCompany(ICompany company, IAdmin admin);
 
     /*
@@ -17,7 +17,7 @@ interface IDataBase {
 
     */
 
-    IClient GetRegisteredClient(String login, String password);
+    IUser GetRegisteredClient(String login, String password);
 /*    поля Company(что заполняет админ при регистрации)
 
     String Name;
@@ -31,7 +31,7 @@ interface IDataBase {
     List<IManager> Workers;
     ClientType MessageSecurityLevel;
     List<String> Reviews;
-    List<Pair<String,IClient>> StatusDescribe_Partner_Pairs;
+    List<Pair<String,IUser>> StatusDescribe_Partner_Pairs;
 */
 
 }
